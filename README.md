@@ -46,7 +46,9 @@ user-agent = "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)"
 Save this file in a directory of your choice, for example, `/etc/curl/`.           
 #### 2. **Modify the C Code to Use `curl.conf`**                                   
 You can modify your C program to load and use the custom `curl.conf` file automatically. `libcurl` does not load a configuration file by default, but you can instruct it to do so.                                                                      
-Here’s an example C program that loads a custom configuration file:     
+Here’s an example C program that loads a custom configuration file:
+
+
 
 ![Pypi](https://raw.githubusercontent.com/DeadmanXXXII/TorScraper/main/Screenshot_20250425-193341.png)
 
