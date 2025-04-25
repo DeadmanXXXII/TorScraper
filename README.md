@@ -1,6 +1,17 @@
 # TorScraper
 Torified ls5
 This is the same setup as ls5 it just uses a tor config to scrape .onion sites
+So using a venv environment use:
+
+```
+pip install selenium
+```
+then
+```
+pip install TorScraper
+```
+use as python3 or just TorScraper in the venv only or it won't work.
+This is due to rules set by python PIP638
 
 ![Pypi](https://raw.githubusercontent.com/DeadmanXXXII/TorScraper/main/Screenshot_20250425-193512.png)
 
