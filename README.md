@@ -28,12 +28,13 @@ This is due to rules set by python PIP638
 This approach helps to keep your code cleaner and allows you to easily adjust settings without modifying the source code.                                                                                                                                ### Step-by-Step Guide
                                                                                    #### 1. **Create a Custom `curl.conf` File**
 
-First, create a custom configuration file, typically named `curl.conf`, with the necessary configurations to route traffic through Tor. Here’s how you can set up the file:                                                                                                                                                                      curl.conf                                                                            
-```
+First, create a custom configuration file, typically named `curl.conf`, with the necessary configurations to route traffic through Tor. Here’s how you can set up the file:                                                                                                                                                                     
+curl.conf                                                                            
+```bash
 #Specify the SOCKS5 proxy (Tor)    
 proxy = "socks5h://127.0.0.1:9050"    
 #Optional: Increase verbosity to help with debugging                              verbose = true                                       
-#Optional: Specify the user-agent string   user-agent = "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)"
+#Optional: Specify the user-agent string  user-agent = "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)"
 ```
                                                                    
 Save this file in a directory of your choice, for example, `/etc/curl/`.           
