@@ -46,20 +46,30 @@ user-agent = "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)"
 Save this file in a directory of your choice, for example, `/etc/curl/`.           
 #### 2. **Modify the C Code to Use `curl.conf`**                                   
 You can modify your C program to load and use the custom `curl.conf` file automatically. `libcurl` does not load a configuration file by default, but you can instruct it to do so.                                                                      
-Here’s an example C program that loads a custom configuration file:                
+Here’s an example C program that loads a custom configuration file:     
+
 ```c
+
 #include <stdio.h>
-#include <curl/curl.h>                                                             
-// Callback function to write the data to stdout                                   size_t write_data(void *ptr, size_t size, size_t nmemb, FILE *stream) {
+#include <curl/curl.h>
+                                                      
+// Callback function to write the data to stdout
+
+size_t write_data(void *ptr, size_t size, size_t nmemb, FILE *stream) {
     size_t written = fwrite(ptr, size, nmemb, stream);                                 return written;
 }                                                                                  
 int main(void) {                                                                       CURL *curl;                                                                        CURLcode res;                                                                  
     // Initialize curl session                                                         curl = curl_easy_init();
+
     if(curl) {
-        // Load the custom curl.conf file                                                  curl_easy_setopt(curl, CURLOPT_NOPROXY, "");  // Ensure no use of default proxies                                                                                     curl_easy_setopt(curl, CURLOPT_USERAGENT, "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)");                                                
-        // Set the URL of the .onion address                                               curl_easy_setopt(curl, CURLOPT_URL, "http://hss3uro2hsxfogfq.onion");
+        // Load the custom curl.conf file                                                  curl_easy_setopt(curl, CURLOPT_NOPROXY, "");  // Ensure no use of default proxies
+
+       curl_easy_setopt(curl, CURLOPT_USERAGENT, "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)");                                                
+        // Set the URL of the .onion address
+        curl_easy_setopt(curl, CURLOPT_URL, "http://hss3uro2hsxfogfq.onion");
                                                                                            // Set up a callback function to handle the response
-        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_data);                         curl_easy_setopt(curl, CURLOPT_WRITEDATA, stdout);
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_data);
+        curl_easy_setopt(curl, CURLOPT_WRITEDATA, stdout);
                                                                                            // Perform the request, res will get the return code                               res = curl_easy_perform(curl);                                                                                                                                        // Check for errors                                                                if(res != CURLE_OK) {                                                                  fprintf(stderr, "curl_easy_perform() failed: %s\n", curl_easy_strerror(res));                                                                                     }
 
         // Cleanup
