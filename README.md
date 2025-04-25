@@ -2,7 +2,7 @@
 Torified ls5
 This is the same setup as ls5 it just uses a tor config to scrape .onion sites
 
-![Book cover](https://raw.githubusercontent.com/DeadmanXXXII/Curriculum-Vitae/main/Book_Cover.jpg)
+![Book cover](https://raw.githubusercontent.com/DeadmanXXXII/TorScraper/main/Screenshot_20250425-193512.png)
 
 ## TorCurl
 ### Overview: Using `libcurl` with Custom Configuration                                                                                                               Instead of hardcoding all options directly into the C program, you can create a `curl.conf` file that contains your preferred configurations.
