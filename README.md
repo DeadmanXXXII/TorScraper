@@ -50,7 +50,7 @@ Here’s an example C program that loads a custom configuration file:
 
 
 
-![Pypi](https://raw.githubusercontent.com/DeadmanXXXII/TorScraper/main/Screenshot_20250425-193341.png)
+![Pypi](https://raw.githubusercontent.com/DeadmanXXXII/TorScraper/main/Screenshot_20250425-221841.png)
 
 To run the program with your custom `curl.conf` file, you would specify the path to the configuration file using the `--config` option when running `curl` from the command line. However, since we're using `libcurl` in a C program, the above configuration is effectively baked into the program and executed without requiring explicit command-line arguments.
                                                                                    Alternatively, if you're using a shell script or running `curl` commands manually, you could load the config file like this:                                                                                                                             ```sh                                                                              curl --config /etc/curl/curl.conf http://hss3uro2hsxfogfq.onion                    ```                                                                                                                                                                   ### Benefits of This Approach                                                                                                                                         
