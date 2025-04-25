@@ -16,6 +16,12 @@ This is due to rules set by python PIP638
 ![Pypi](https://raw.githubusercontent.com/DeadmanXXXII/TorScraper/main/Screenshot_20250425-193512.png)
 
 ![Pypi](https://raw.githubusercontent.com/DeadmanXXXII/TorScraper/main/Screenshot_20250425-182436.png)
+
+![Pypi](https://raw.githubusercontent.com/DeadmanXXXII/TorScraper/main/Screenshot_20250425-193341.png)
+
+![Pypi](https://raw.githubusercontent.com/DeadmanXXXII/TorScraper/main/Screenshot_20250425-182731.png)
+
+![Pypi](https://raw.githubusercontent.com/DeadmanXXXII/TorScraper/main/Screenshot_20250425-193337.png)
 ## TorCurl
 ### Overview: Using `libcurl` with Custom Configuration                                                                                                               Instead of hardcoding all options directly into the C program, you can create a `curl.conf` file that contains your preferred configurations.
 This approach helps to keep your code cleaner and allows you to easily adjust settings without modifying the source code.                                                                                                                                ### Step-by-Step Guide
