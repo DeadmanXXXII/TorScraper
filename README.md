@@ -17,9 +17,11 @@ This is due to rules set by python PIP638
 
 ![Pypi](https://raw.githubusercontent.com/DeadmanXXXII/TorScraper/main/Screenshot_20250425-182436.png)
 
+![Pypi](https://raw.githubusercontent.com/DeadmanXXXII/TorScraper/main/Screenshot_20250425-182731.png)
+
 ![Pypi](https://raw.githubusercontent.com/DeadmanXXXII/TorScraper/main/Screenshot_20250425-193341.png)
 
-![Pypi](https://raw.githubusercontent.com/DeadmanXXXII/TorScraper/main/Screenshot_20250425-182731.png)
+
 
 ![Pypi](https://raw.githubusercontent.com/DeadmanXXXII/TorScraper/main/Screenshot_20250425-193337.png)
 ## TorCurl
