@@ -31,10 +31,16 @@ This approach helps to keep your code cleaner and allows you to easily adjust se
 First, create a custom configuration file, typically named `curl.conf`, with the necessary configurations to route traffic through Tor. Here’s how you can set up the file:                                                                                                                                                                     
 curl.conf                                                                            
 ```bash
-#Specify the SOCKS5 proxy (Tor)    
-proxy = "socks5h://127.0.0.1:9050"    
-#Optional: Increase verbosity to help with debugging                              verbose = true                                       
-#Optional: Specify the user-agent string  user-agent = "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)"
+#Specify the SOCKS5 proxy (Tor)
+   
+proxy = "socks5h://127.0.0.1:9050"
+ 
+#Optional: Increase verbosity to help with debugging
+
+verbose = true                                       
+#Optional: Specify the user-agent string
+
+user-agent = "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)"
 ```
                                                                    
 Save this file in a directory of your choice, for example, `/etc/curl/`.           
