@@ -69,7 +69,7 @@ def build_link_graph(links, base_url):
 def request_new_tor_circuit():
     try:
         s = socket.socket()
-        s.connect(("127.0.0.1", 9051))  # Tor control port
+        s.connect(("127.0.0.1", 9050))  # Tor control port
         s.send(b'AUTHENTICATE ""\r\n')
         resp = s.recv(1024)
         if b'250' not in resp:
