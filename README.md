@@ -86,7 +86,15 @@ Now, you can use `curl` with Tor by specifying the SOCKS5 proxy:
                                                                                    ```bash                                                                            curl -x socks5://127.0.0.1:9050 https://check.torproject.org                       ```
                                                                                    This command tells `curl` to route its traffic through the Tor network using the SOCKS5 proxy at `127.0.0.1:9050`.                                                    
 ### Summary                                                                        
-By following these steps, you customized your `curl` installation to support SOCKS5 proxying,                                                                         allowing you to route your HTTP and HTTPS requests through Tor.                    This method ensures you're using the latest version of `curl` with all the features you need, which may not always be
+By following these steps, you customized your `curl` installation to support SOCKS5 proxying, 
+
+To use extensions.py add 
+```python
+from Torscrape import extensions
+```
+
+
+allowing you to route your HTTP and HTTPS requests through Tor.                    This method ensures you're using the latest version of `curl` with all the features you need, which may not always be
 available in the pre-compiled packages provided by your distribution.
                                                                                    Doing this fixes:
                                                                                    Failed to fetch page http://zqktlwi4fecvo6ri.onion: error sending request for url (http://zqktlwi4fecvo6ri.onion/): error trying to connect: failed to lookup address information: Name or service not known
